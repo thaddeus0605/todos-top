@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    position: relative;
+    min-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+}
+
+.sidebar {
+    background-color: gray;
+    height: 100vh;
+    color: white;
+}
+
+.task-container {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.project-container {
+    margin-top: 50px;
+    width: min(1200px, 90%);
+    min-width: 500px;
+}
+
+.add-task-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    right: 40px;
+    top: 30px;
+    padding: 10px 25px 10px 17px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+
+}
+
