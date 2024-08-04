@@ -5,12 +5,14 @@ import { ProjectView } from "../Views/ProjectVIew";
 export class AppController {
     constructor() {
         this.projects = [new Project('Default')];
+        this.currentProject = this.projects[0];
         this.view = new ProjectView();
 
-
+        this.view.setProjectClickHandler(this.switchProject.bind(this));
         this.view.setAddProjectHandler(this.addProject.bind(this));
 
         this.view.renderProjects(this.projects);
+        this.view.setCurrentProjectName(this.currentProject.name);
         
     }
 
@@ -23,5 +25,11 @@ export class AppController {
 
     addProject(name) {
         this.createProject(name);
+        
+    }
+    
+    switchProject(project) {
+        this.currentProject = project;
+        this.view.setCurrentProjectName(this.currentProject.name);
     }
 }
