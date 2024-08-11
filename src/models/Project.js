@@ -8,11 +8,16 @@ export class Project {
         this.todos.push(todo);
     }
 
-    removeTodo(todo) {
-        this.todos = this.todos.filter(t => t !== todo);
-    }
-
     getTodos() {
         return this.todos;
     }
+
+    deleteTodo(todo) {
+        const index = this.todos.indexOf(todo);
+        if (index > -1) {
+            this.todos.splice(index, 1);
+        }
+    }
+
+    
 }

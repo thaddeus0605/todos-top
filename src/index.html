@@ -19,14 +19,39 @@
                 </div>
             </div>
         </div>
-        <div class="task-container">
-            <div class="project-container">
-                <h1 id="current-project-name">Project!</h1>
-            </div>
-        </div>
         <button type="button" class="add-task-btn">
             <span>Add Task</span>
         </button>
+        <div class="task-container">
+            <h1 id="current-project-name">Project!</h1>
+            <div class="project-container">
+                
+            </div>
+        </div>
+        
+    </div>
+
+
+     <!-- The Modal -->
+     <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="todoForm">
+                <label for="todoTitle">Title:</label>
+                <input type="text" id="todoTitle" name="title" required><br><br>
+                <label for="todoDescription">Description:</label>
+                <input type="text" id="todoDescription" name="description" required><br><br>
+                <label for="todoDueDate">Due Date:</label>
+                <input type="date" id="todoDueDate" name="dueDate" required><br><br>
+                <label for="todoPriority">Priority:</label>
+                <select id="todoPriority" name="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select><br><br>
+                <button type="submit">Add Todo</button>
+            </form>
+        </div>
     </div>
     
 
